@@ -24,7 +24,6 @@ namespace OdeToFood.Controllers
             model.Restaurants = _restaurantData.GetAll();
             model.CurrentMessage = _greeter.GetMessageOfTheDay();
 
-
             return View(model);
         }
 
