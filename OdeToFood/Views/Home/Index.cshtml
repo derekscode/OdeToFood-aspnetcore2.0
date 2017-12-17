@@ -1,0 +1,19 @@
+﻿@model List<OdeToFood.Models.Restaurant>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    @*<h1>@Model.Name</h1>
+        <div>Kim is silly and her favorite number is @Model.Id</div>*@
+
+
+    @foreach (var item in Model)
+    {
+        <div>
+            the number is @item.Id and the name is @item.Name
+        </div>
+    }
+</body>
+</html>

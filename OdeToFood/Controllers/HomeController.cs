@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using OdeToFood.Models;
+using System.Collections.Generic;
 
 namespace OdeToFood.Controllers
 {
@@ -6,7 +8,31 @@ namespace OdeToFood.Controllers
     {
         public IActionResult Index()
         {
-            return Content("Hello from the HomeController");
+
+            List<Restaurant> list = new List<Restaurant>();
+
+            list.Add(new Restaurant
+            {
+                Id = 5,
+                Name = "Derek's Pizza Place"
+            });
+
+            list.Add(new Restaurant
+            {
+                Id = 17,
+                Name = "Kim's Pizza Place"
+            });
+
+
+
+            var model = new Restaurant
+            {
+                Id = 17,
+                Name = "Kim's Pizza Place"
+            };
+
+            return View(list);
+
         }
     }
 }
