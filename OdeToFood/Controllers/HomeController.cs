@@ -6,7 +6,7 @@ namespace OdeToFood.Controllers
     {
         public IActionResult Index()
         {
-            return Content("Hello from the HomeController!");
+            return Content("Hello from the HomeController");
         }
     }
 }
