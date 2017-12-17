@@ -40,7 +40,6 @@ namespace OdeToFood
             app.Run(async (context) =>
             {
                 var greeting = greeter.GetMessageOfTheDay();
-                //context.ResponseType.ContentType = "";
                 await context.Response.WriteAsync($"Not found");
             });
         }
