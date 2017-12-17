@@ -6,32 +6,18 @@ namespace OdeToFood.Controllers
 {
     public class HomeController : Controller
     {
+        private IRestaurantData _restaurantData;
+
+        public HomeController(IRestaurantData restaurantData)
+        {
+            _restaurantData = restaurantData;
+        }
+
         public IActionResult Index()
         {
+            var model = _restaurantData.GetAll();
 
-            List<Restaurant> list = new List<Restaurant>();
-
-            list.Add(new Restaurant
-            {
-                Id = 5,
-                Name = "Derek's Pizza Place"
-            });
-
-            list.Add(new Restaurant
-            {
-                Id = 17,
-                Name = "Kim's Pizza Place"
-            });
-
-
-
-            var model = new Restaurant
-            {
-                Id = 17,
-                Name = "Kim's Pizza Place"
-            };
-
-            return View(list);
+            return View(model);
 
         }
     }
